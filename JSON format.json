@@ -1,0 +1,25 @@
+In JSON encoding format:
+
+POST ../1/payment/861234567/transactions/amount HTTP/1.1
+Authorization: WSSE realm="SDP",profile="UsernameToken"
+X-WSSE: UsernameToken
+Username="35000001",PasswordDigest="D6ri9fAmdFhGijaU6c+9myLB/9s=",Nonce="2013042718472200001",
+Created="2013-04-27T18:47:22Z"
+X-RequestHeader: request ServiceId="35000001000012"
+Accept-Encoding: gzip,deflate
+Accept: application/json
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: 10.137.213.125:14312
+Content-Type: application/json
+Content-Length: 12345
+{"amountTransaction": {
+ "endUserId": "tel:861234567",
+ "paymentAmount": {"chargingInformation": {
+ "amount": 10,
+ "code": "TEST-012345",
+ "currency": "USD",
+ "description": ["Test amount transaction in \"Charged\" state"]
+ }},
+ "referenceCode": "REF-12345",
+ "transactionStatus": "Charged"
+}} 

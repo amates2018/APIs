@@ -1,0 +1,28 @@
+In XML encoding format:
+
+POST ../1/payment/861234567/transactions/amount HTTP/1.1
+Authorization: WSSE realm="SDP",profile="UsernameToken"
+X-WSSE: UsernameToken
+Username="35000001",PasswordDigest="D6ri9fAmdFhGijaU6c+9myLB/9s=",Nonce="2013042718472200001",
+Created="2013-04-27T18:47:22Z"
+X-RequestHeader: request ServiceId="35000001000012"
+Accept-Encoding: gzip,deflate
+Accept: application/xml
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: 10.137.213.125:14312
+Content-Type: application/xml; charset=UTF-8
+Content-Length: 12345
+<?xml version="1.0" encoding="UTF-8"?>
+<payment:amountTransaction xmlns:payment="urn:oma:xml:rest:payment:1">
+ <endUserId>tel:861234567</endUserId> 
+  <paymentAmount>
+ <chargingInformation>
+ <description>Test amount transaction in "Charged" state</description>
+ <currency>USD</currency>
+ <amount>10</amount>
+ <code>TEST-012345</code>
+ </chargingInformation>
+ </paymentAmount>
+ <transactionStatus>Charged</transactionStatus>
+ <referenceCode>REF-12345</referenceCode>
+ </payment:amountTransaction> 
